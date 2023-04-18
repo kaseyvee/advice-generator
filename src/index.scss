@@ -6,7 +6,7 @@
 }
 
 @mixin pixelsToRem($pixels) {
-  font-size: $pixels / 16 + rem;
+  font-size: calc($pixels / 16) + rem;
 }
 
 $grey: hsl(193, 38%, 86%);
