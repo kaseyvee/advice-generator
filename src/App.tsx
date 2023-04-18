@@ -9,8 +9,8 @@ type IAdvice = {
 
 const App: React.FC = () => {  
   const [advice, setAdvice] = useState<IAdvice>({
-    id: 0,
-    advice: ""
+    id: 42,
+    advice: "Roll the dice to get advice."
   });
   const [loading, setLoading] = useState(false);
 
@@ -29,10 +29,6 @@ const App: React.FC = () => {
       })
       .catch((err) => console.log(err.message))
   }
-
-  useEffect(() => {
-    fetchAdvice();
-  }, [])
 
   return (
     <main>
