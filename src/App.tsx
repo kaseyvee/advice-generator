@@ -35,8 +35,8 @@ const App: React.FC = () => {
   }, [])
 
   return (
-    <>
-      <motion.main
+    <main>
+      <motion.div
         className="App"
         animate={loading ? { scaleY: [1, 0] } : { scaleY: [0, 1] }}
       >
@@ -51,7 +51,7 @@ const App: React.FC = () => {
         <button aria-label="get new quote" onClick={() => fetchAdvice()}>
           <img src="icon-dice.svg" alt="" />
         </button>
-      </motion.main>
+      </motion.div>
 
       {loading && <motion.img
         className="loader"
@@ -60,7 +60,7 @@ const App: React.FC = () => {
         animate={{ y: [0, 5, -50, 5, 0], rotate: [0, 0, 360, 0, 0] }}
         transition={{ repeat: Infinity }}
       />}
-    </>
+    </main>
   )
 }
 
